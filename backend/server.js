@@ -1,6 +1,7 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const cloudinary = require('cloudinary').v2;
+const path = require('path');
 
 const connectDatabase = require('./config/db.config');
 
@@ -32,7 +33,16 @@ app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/posts', postRoutes);
 app.use('/api/notifications', notificationRoutes);
-app.use('/api/users/search', searchRoutes);
+app.use('/api/search', searchRoutes);
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../frontend/dist')));
+  app.get('/*any', (req, res) => {
+    res.sendFile(
+      path.resolve(__dirname, '..', 'frontend', 'dist', 'index.html')
+    );
+  });
+}
 
 app.listen(PORT, () => {
   console.log(`Server running on the port: ${PORT}`);

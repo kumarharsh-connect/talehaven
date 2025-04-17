@@ -14,7 +14,7 @@ const SearchPage = () => {
     queryKey: ['searchUsers', query],
     queryFn: async () => {
       try {
-        const res = await fetch(`/api/users/search?search_query=${query}`);
+        const res = await fetch(`/api/search?search_query=${query}`);
         const data = await res.json();
 
         if (!res.ok) {
