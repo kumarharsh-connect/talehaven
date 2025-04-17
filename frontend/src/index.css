@@ -1,0 +1,65 @@
+@import 'tailwindcss';
+
+@plugin "daisyui" {
+  themes: false;
+}
+
+@plugin "daisyui/theme" {
+  name: 'talehavenEnchanted';
+  color-scheme: light;
+  default: true;
+  prefersdark: false;
+
+  /* Base Colors */
+  --color-base-100: #f6f0f6; /* Very light lilac background */
+  --color-base-200: #f0e8f3; /* Subtle lavender depth */
+  --color-base-300: #d9c4d7; /* Card or element background */
+  --color-base-content: #3b3a3a; /* Soft dark text for readability */
+
+  /* Primary (brand) Color */
+  --color-primary: #413398; /* Majestic purple */
+  --color-primary-content: #ffffff;
+
+  /* Secondary (accents, UI highlights) */
+  --color-secondary: #f7c7e1; /* Gentle pink for warmth */
+  --color-secondary-content: #3b3a3a;
+
+  /* Accent (interactive or subtle UI elements) */
+  --color-accent: #b2a3db; /* Light lavender for visual flow */
+  --color-accent-content: #3b3a3a;
+
+  /* Neutral (card backgrounds, sections) */
+  --color-neutral: #ffffff;
+  --color-neutral-content: #3b3a3a;
+
+  /* State Colors */
+  --color-info: #7ba9eb; /* Calm info blue */
+  --color-info-content: #ffffff;
+
+  --color-success: #57d68a; /* Soft minty green */
+  --color-success-content: #ffffff;
+
+  --color-warning: #f0b24c; /* Amber yellow */
+  --color-warning-content: #3b3a3a;
+
+  --color-error: #e57373; /* Gentle error red */
+  --color-error-content: #ffffff;
+
+  /* Border radius */
+  --radius-box: 0.75rem;
+  --radius-field: 0.5rem;
+  --radius-selector: 0.5rem;
+
+  /* Extras */
+  --border: 1px;
+  --depth: 1;
+  --noise: 0.01;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
