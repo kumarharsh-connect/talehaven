@@ -23,4 +23,11 @@ Welcome to **TaleHaven** - a full-stack social media platform designed to share 
 
 Check out the live demo of **TaleHaven** here: [TaleHaven](https://talehaven.onrender.com/)
 
-Made By Harsh 
+## 👨‍💻 Author
+
+Created by Harsh
+
+---
+
+Feel free to reach out with any questions or suggestions!
+
